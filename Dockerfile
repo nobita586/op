@@ -11,8 +11,8 @@ RUN mkdir -p /isos /vms /scripts
 WORKDIR /scripts
 
 # Download ISOs automatically
-RUN wget -O /isos/ubuntu-22.04.iso https://releases.ubuntu.com/22.04/ubuntu-22.04-live-server-amd64.iso \
- && wget -O /isos/debian-12.iso https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-12.7.0-amd64-netinst.iso
+RUN wget -O /isos/ubuntu-22.04.5.iso https://releases.ubuntu.com/jammy/ubuntu-22.04.5-live-server-amd64.iso \
+    && wget -O /isos/debian-12.7.0.iso https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-12.7.0-amd64-netinst.iso
 
 # Copy auto-run script into container
 COPY kvm_auto.sh /scripts/kvm_auto.sh
